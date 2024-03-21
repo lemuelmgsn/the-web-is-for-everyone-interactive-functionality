@@ -1,0 +1,158 @@
+.fav-h1{
+    padding: 0 3em;
+    padding-top: 1em;
+    color: var(--primary-black);
+  }
+  .logo{
+   scale: .1;
+  }
+  form{
+    margin-top: 10px;
+    padding: 0 6em;
+    display: flex;
+    font-weight: bold;
+    color: var(--primary-black);
+  }
+  h2{
+    color: var(--primary-blue);
+    margin-bottom: 5px;
+  }
+  p{
+    padding-top: 3px;
+  }
+  main{
+    background-color: var(--primary-white);
+  }
+  .price{
+    font-weight: bold;
+  }
+  .house-link{
+    color: var(--primary-blue);
+  }
+  .house-link:hover{
+    color: #0a4669;
+  }
+  .house-image{
+    height: 300px;
+    max-width: 100%;
+  }
+  .house-template{
+    /* border: 1px red solid; */
+    display: grid;
+    grid-template-columns: 1fr;
+    /* gap: 1.125em; */
+  }
+  button{
+    justify-content: end;
+    border: none;
+    background-color: transparent;
+    color: var(--primary-black);
+    font-weight: bold;
+    font-size: 17px;
+  }
+  button:hover{
+    color: black;
+    text-decoration: underline;
+  }
+  
+  /*  BREAKPOINTS VOOR LAYOUT */
+  
+  @media screen and (min-width: 457px) {
+      .house-template {
+        grid-template-columns: 1fr;
+      }
+    }
+  
+  @media screen and (min-width: 758px) {
+      .house-template{
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  
+    @media screen and (min-width: 1076px) {
+      .house-template{
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  
+  /* STYLING VOOR DE RATING STERRETJES */
+  
+  .rate {
+    float: left;
+  }
+  .rate:not(:checked) > input {
+      position:absolute;
+      top:-9999px; 
+  }
+  .rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+  }
+  .rate:not(:checked) > label:before {
+    content: '★ ';
+  }
+  .rate > input:checked ~ label {
+    color: #ffc700;    
+  }
+  .rate:not(:checked) > label:hover,
+  .rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+  }
+  .rate > input:checked + label:hover,
+  .rate > input:checked + label:hover ~ label,
+  .rate > input:checked ~ label:hover,
+  .rate > input:checked ~ label:hover ~ label,
+  .rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+  }
+  
+  /* GRID LAYOUT VOOR DE HUIZEN */
+  
+  .grid-container{
+    /* background-color: var(--primary-orange); */
+    margin: 1em;
+    padding: 5px;
+    border-radius: 10px;
+    /* border: 5px var(--primary-orange) solid; */
+    border: 5px rgb(184, 184, 184) solid;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-areas: 
+    'image image'
+    'content beoordelingen'
+    'ster verwijderen'
+    ;
+  }
+  .image{
+    grid-area: image;
+    width: 100%;
+  }
+  .image img{
+    width: 100%;
+  }
+  .content{
+    grid-area: content;
+  }
+  .ster{
+    grid-area: ster;
+  }
+  .verwijderen{
+    grid-area: verwijderen;
+    justify-self: end;
+    /* align-self: center; */
+    align-self: flex-end;
+  }
+  .content-ul{
+    margin-left: 1em;
+  }
+  .beoordelingen{
+    justify-self: center;
+    margin-top: 7px;
+  }
+  

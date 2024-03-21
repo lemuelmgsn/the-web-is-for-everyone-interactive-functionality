@@ -1,0 +1,36 @@
+*{
+    font-family: sans-serif;
+    --primary-orange: #F7A100;
+    --primary-black: #333333;
+    --primary-white: #FFFFFF;
+    --primary-blue: #0071B3;
+    --primary-grey: #E6F2F7;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: var(--primary-orange);
+    color: var(--primary-white);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1em;
+}
+nav > ul{
+    display: flex;
+    list-style-type: none;
+    margin-right: auto;
+    margin-left: auto;
+}
+nav > ul > li{
+    display: flex;
+    /* justify-content: end; */
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+
+
+  
+
