@@ -61,6 +61,16 @@
       .house-template {
         grid-template-columns: 1fr;
       }
+      .grid-container{
+        grid-template-columns: max-content;
+        grid-template-areas: 
+        'image'
+        'content'
+        'ster'
+        'beoordelingen'
+        'verwijderen'
+        ;
+      }
     }
   
   @media screen and (min-width: 758px) {
@@ -152,7 +162,15 @@
     margin-left: 1em;
   }
   .beoordelingen{
-    justify-self: center;
+    justify-self: end;
     margin-top: 7px;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 160px;
+    padding-right: 2em;
+  }
+  .beoordelingen p{
+    width: 100%;
+    padding-right: 3em;
   }
   
