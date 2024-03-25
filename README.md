@@ -55,7 +55,7 @@ Hoe kan je aan dit project werken/bewerken?
 
 1. Fork de repository
 2. Download node.js op je apparaat
-3. Open in Visual Studio Code de terminal door ctrl + ` te klikken.
+3. Open in Visual Studio Code de terminal door  ctrl + ` te klikken.
 4. Download node.js in het project door npm.install toe te passen in de Visual Studio Code terminal.
 
 
