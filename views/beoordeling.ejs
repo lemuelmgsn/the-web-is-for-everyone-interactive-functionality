@@ -37,7 +37,8 @@
             <div class="ster">
                 <div class="rate">
                     <!-- <p>Mijn beoordeling</p> -->
-                    <p><a href="/beoordeling" class="beoordeling-text">Notitie maken +</a></p>
+                    <!-- <p><a href="/beoordeling" class="beoordeling-text">Notitie maken +</a></p> -->
+                    <p><button popovertarget="mydiv">Notitie maken +</button></p>
                     <input type="radio" id="star5" name="rate" value="5" />
                     <label for="star5" title="text">5 stars</label>
                     <input type="radio" id="star4" name="rate" value="4" />
@@ -59,17 +60,39 @@
                 <p>Beoordelingen van: </p>
                 <br>
 
-                <%- include('./partials/ster-rating') %>
+                <%- include('./partials/ster-rating-persoon') %>
                 
-                <%- include('./partials/ster-rating') %>
+                <%- include('./partials/ster-rating-persoon') %>
 
-                <%- include('./partials/ster-rating') %>
+                <%- include('./partials/ster-rating-persoon') %>
 
-                <%- include('./partials/ster-rating') %>
+                <%- include('./partials/ster-rating-persoon') %>
 
             </div>
 
         </article>
+
+        <div popover id="mydiv">
+          <div class="popover-div">
+               <h2>Notities:</h2>
+            <br>
+            <p>Algemene score: </p> <%- include('./partials/ster-notitie') %>
+            <hr>
+            <ul>
+                <li>Keuken </li><%- include('./partials/ster-notitie') %>
+                <li>Tuin </li><%- include('./partials/ster-notitie') %>
+                <li>Ligging </li><%- include('./partials/ster-notitie') %>
+                <br>
+                <li>Badkamer </li><%- include('./partials/ster-notitie') %>
+                <li>Prijs </li><%- include('./partials/ster-notitie') %>
+                <li>Oppervlakte </li><%- include('./partials/ster-notitie') %>
+            </ul>
+           
+            <button popovertarget="mydiv" popovertargetaction="hide" class="close-button">Close</button>
+          </div>  
+        </div>
+           
+
    <% }); %>
 </section>
 </main>

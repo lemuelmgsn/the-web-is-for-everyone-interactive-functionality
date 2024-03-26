@@ -173,4 +173,13 @@
     width: 100%;
     padding-right: 3em;
   }
+  .beoordeling-text{
+    color: var(--primary-black);
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .beoordeling-text:hover{
+    text-decoration: underline;
+    color: black;
+  }
   

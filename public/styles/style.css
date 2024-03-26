@@ -6,3 +6,32 @@
     --hover-blue: #0a4669;
     --primary-grey: #E6F2F7;
   }
+  /* STYLING VOOR DE POPOVER TEST */
+  #mydiv {
+    text-align:left;
+    justify-self: center;
+    align-self: center;
+    padding:40px;
+    background-color:var(--primary-white);
+    border: 5px solid var(--primary-orange);
+    border-radius: 5px;
+    font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    height: 500px;
+    width: 60%;
+  }
+  .popover-div{
+    height: max-content;
+  }
+  .popover-div ul{
+    display: flexbox;
+    border: 1px solid red;
+  }
+  .popover-div li{
+    display: flexbox;
+    border: 1px solid blue;
+    padding: 1em;
+  }
+  .close-button{
+    align-self: end;
+    justify-self: end;
+  }

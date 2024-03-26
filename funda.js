@@ -46,6 +46,12 @@ app.get('/detail/:id', function(request, response) {
   });
 })
 
+app.get('/beoordeling', function(request, response) {
+  fetchJson('https://fdnd-agency.directus.app/items/f_houses').then((apiData) => {
+      response.render('beoordeling', {data: apiData.data})
+});
+})
+
 // 
 
 // Stel het poortnummer in waar express op moet gaan luisteren
