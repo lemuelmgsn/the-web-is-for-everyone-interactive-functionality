@@ -1,0 +1,21 @@
+/* .main-rm{
+    display: flex;
+    justify-content: center; 
+    align-items: start;
+    height: 100vh;
+
+} */
+.rating-section{
+    /* position: absolute; */
+    position: fixed;
+    z-index: 999;
+    top: 20%;
+    left: 35%;
+    margin: 1em;
+    padding: 1em;
+    background-color: #fff;
+    border: 5px solid var(--primary-orange);
+    border-radius: 5px;
+    height: 300px;
+    width: 400px;
+}

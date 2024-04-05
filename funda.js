@@ -46,9 +46,21 @@ app.get('/detail/:id', function(request, response) {
   });
 })
 
-app.get('/beoordeling', function(request, response) {
+app.get('/user-ratings', function(request, response) {
   fetchJson('https://fdnd-agency.directus.app/items/f_houses').then((apiData) => {
-      response.render('beoordeling', {data: apiData.data})
+      response.render('user-ratings', {data: apiData.data})
+});
+})
+
+app.get('/rating-maken', function(request, response) {
+  fetchJson('https://fdnd-agency.directus.app/items/f_houses').then((apiData) => {
+      response.render('rating-maken', {data: apiData.data})
+});
+})
+
+app.get('/ster-rating-persoon', function(request, response) {
+  fetchJson('https://fdnd-agency.directus.app/items/f_houses').then((apiData) => {
+      response.render('ster-rating-persoon')
 });
 })
 

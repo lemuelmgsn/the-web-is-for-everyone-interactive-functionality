@@ -35,9 +35,10 @@
             </div>
 
             <div class="ster">
-                <div class="rate">
-                    <!-- <p>Mijn beoordeling</p> -->
-                    <p><a href="/beoordeling" class="beoordeling-text">Notitie maken +</a></p>
+                <p><a href="/rating-maken" class="beoordeling-text">Notitie maken +</a></p>
+                <!-- <p><a href="/user-ratings" class="beoordeling-text">Notitie maken +</a></p> -->
+              
+                  <div class="rate">
                     <input type="radio" id="star5" name="rate" value="5" />
                     <label for="star5" title="text">5 stars</label>
                     <input type="radio" id="star4" name="rate" value="4" />
@@ -48,7 +49,7 @@
                     <label for="star2" title="text">2 stars</label>
                     <input type="radio" id="star1" name="rate" value="1" />
                     <label for="star1" title="text">1 star</label>
-                </div>
+                    </div>
             </div>
 
             <div class="verwijderen">
@@ -59,15 +60,14 @@
                 <p>Beoordelingen van: </p>
                 <br>
 
-                <%- include('./partials/ster-rating-persoon') %>
-                
-                <%- include('./partials/ster-rating-persoon') %>
-
-                <%- include('./partials/ster-rating-persoon') %>
-
-                <%- include('./partials/ster-rating-persoon') %>
-
+                <ul>
+                    <li><%- include('./partials/ster-rating-persoon', {type: 'persoon-1'}) %></li>
+                    <li> <%- include('./partials/ster-rating-persoon', {type: 'persoon-2'}) %></li>
+                    <li><%- include('./partials/ster-rating-persoon', {type: 'persoon-3'}) %></li>
+                    <li><%- include('./partials/ster-rating-persoon', {type: 'persoon-4'}) %></li>
+                </ul>
             </div>
+
 
         </article>
    <% }); %>
