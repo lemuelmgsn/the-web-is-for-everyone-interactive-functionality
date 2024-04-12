@@ -13,6 +13,10 @@ const apiUrl = 'https:fdnd-agency.directus.app/items/f_houses'
 // Maak een nieuwe express app aan
 const app = express()
 
+// notitie van rating pagina 
+const messages = []
+
+
 // Stel ejs in als template engine
 app.set('view engine', 'ejs')
 
@@ -54,8 +58,12 @@ app.get('/user-ratings', function(request, response) {
 
 app.get('/rating-maken', function(request, response) {
   fetchJson('https://fdnd-agency.directus.app/items/f_houses').then((apiData) => {
-      response.render('rating-maken', {data: apiData.data})
+      response.render('rating-maken', {
+        data: apiData.data,
+        messages: messages
+      })
 });
+      messages.push(request.body.bericht)
 })
 
 app.get('/ster-rating-persoon', function(request, response) {

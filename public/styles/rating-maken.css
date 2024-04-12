@@ -6,11 +6,11 @@
 
 } */
 .rating-section{
-    /* position: absolute; */
     position: fixed;
     z-index: 999;
     top: 20%;
     left: 35%;
+    /* styling */
     margin: 1em;
     padding: 1em;
     background-color: #fff;

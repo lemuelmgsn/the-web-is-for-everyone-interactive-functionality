@@ -20,10 +20,23 @@
 </ul>
 
 
-<textarea></textarea>
+<article class="bericht-article">
+    <label>Comments: 
+      <textarea required name="bericht" placeholder="Typ hier..."></textarea>
+    </label>  
 
-<input type="submit">
+      <h2>Mijn notitie:</h2>
+    <ul>
+      <!-- <% messages.forEach(message => { %> -->
+        <li><p><%= message %></p></li>
+        <!-- <% }) %> -->
+    </ul>
+   </article>
 
+<form method="get" action="/rating-maken">
+<!-- <form method="post" action="/rating-maken"> -->
+  <button type="submit" class="verzend-btn">Verzenden</button>
+</form>
 </section>
 
 <%- include('./partials/foot') %>
